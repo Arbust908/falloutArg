@@ -1,0 +1,59 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+class HomeController extends Controller
+{
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        // $this->middleware('auth');
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        return view('home');
+    }
+
+    /**
+     * Show the Company info.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function about()
+    {
+        return view('about');
+    }
+
+    /**
+     * Show the frequently asked questions.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function faq()
+    {
+        return view('faq');
+    }
+
+    /**
+     * Show the logged users info.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function profile()
+    {
+        $this->middleware('auth');
+        return view('profile');
+    }
+}
