@@ -6,6 +6,13 @@
       0 => 'Fideloper\\Proxy\\TrustedProxyServiceProvider',
     ),
   ),
+  'laracasts/generators' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Laracasts\\Generators\\GeneratorsServiceProvider',
+    ),
+  ),
   'laravel/tinker' => 
   array (
     'providers' => 
