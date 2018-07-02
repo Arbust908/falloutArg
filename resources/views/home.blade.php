@@ -1,20 +1,18 @@
 @extends('layouts.app')
 
 @section('title')
-
+|| Home
 @endsection
 
 @section('content')
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    You are logged in!
-                </div>
+<section>
+    <h1>Fallout Arg</h1>
+    <h4></h4>
+    @CTA()
+        Suscribe!
+    @endCTA
+</section>
 
 @endsection
 
