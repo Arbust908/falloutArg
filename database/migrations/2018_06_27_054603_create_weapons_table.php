@@ -15,10 +15,10 @@ class CreateWeaponsTable extends Migration
   {
     Schema::create('weapons', function (Blueprint $table) {
       $table->increments('id');
+      $table->string('slug');
       
-      $table->string('name');
+      $table->integer('item_id');
       $table->integer('skill_id');
-      $table->integer('weight');
       $table->integer('ammo_id');
       $table->string('100%');
       $table->string('75%');
@@ -29,12 +29,7 @@ class CreateWeaponsTable extends Migration
       $table->integer('medium');
       $table->integer('long');
       $table->integer('distant');
-      $table->integer('rarity_id');
-      $table->string('special');
       $table->string('trait');
-      $table->string('img');
-      
-      $table->integer('status');
       
       $table->timestamps();
     });

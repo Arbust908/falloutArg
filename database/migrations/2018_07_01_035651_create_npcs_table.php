@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class NPCSkil extends Migration
+class CreateNpcsTable extends Migration
 {
   /**
   * Run the migrations.
@@ -13,14 +13,19 @@ class NPCSkil extends Migration
   */
   public function up()
   {
-    Schema::create('n_p_c_skill', function (Blueprint $table) {
+    Schema::create('npcs', function (Blueprint $table) {
       $table->increments('id');
+      $table->string('slug');
       
-      $table->integer('npc_id');
-      $table->integer('skill_id');
-      $table->integer('porcentaje');
+      $table->string('name');
+      $table->integer('health');
+      $table->integer('damage_reduction');
+      $table->string('img');
+      
+      $table->integer('status');
       
       $table->timestamps();
+      
     });
   }
   
@@ -31,6 +36,6 @@ class NPCSkil extends Migration
   */
   public function down()
   {
-    Schema::dropIfExists('n_p_c_skill');
+    Schema::dropIfExists('npcs');
   }
 }

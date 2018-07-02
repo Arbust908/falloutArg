@@ -15,6 +15,8 @@ class CreateAmmosTable extends Migration
   {
     Schema::create('ammos', function (Blueprint $table) {
       $table->increments('id');
+      $table->string('slug');
+
       
       $table->string('name');
       $table->integer('weight');

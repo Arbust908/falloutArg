@@ -15,6 +15,8 @@ class CreateRaritiesTable extends Migration
   {
     Schema::create('rarities', function (Blueprint $table) {
       $table->increments('id');
+      $table->string('slug');
+
       
       $table->string('name');
       $table->string('description');
