@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1235"
+   height="650"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="Flag of the United States.svg">
+  <metadata
+     id="metadata63">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs61" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1096"
+     id="namedview59"
+     showgrid="false"
+     inkscape:zoom="0.24615543"
+     inkscape:cx="153.19919"
+     inkscape:cy="74.502084"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <rect
+     width="1235"
+     height="650"
+     fill="#fff"
+     id="rect4" />
+  <g
+     id="g3109"
+     style="fill:#bb133e;fill-opacity:1">
+    <rect
+       id="rect6"
+       fill="#bf0a30"
+       height="50"
+       width="1235"
+       style="fill:#bb133e;fill-opacity:1" />
+    <rect
+       id="rect8"
+       fill="#bf0a30"
+       height="50"
+       width="1235"
+       y="100"
+       style="fill:#bb133e;fill-opacity:1" />
+    <rect
+       id="rect10"
+       fill="#bf0a30"
+       height="50"
+       width="1235"
+       y="200"
+       style="fill:#bb133e;fill-opacity:1" />
+    <rect
+       id="rect12"
+       fill="#bf0a30"
+       height="50"
+       width="1235"
+       y="300"
+       style="fill:#bb133e;fill-opacity:1" />
+    <rect
+       id="rect14"
+       fill="#bf0a30"
+       height="50"
+       width="1235"
+       y="400"
+       style="fill:#bb133e;fill-opacity:1" />
+    <rect
+       id="rect16"
+       fill="#bf0a30"
+       height="50"
+       width="1235"
+       y="500"
+       style="fill:#bb133e;fill-opacity:1" />
+    <rect
+       id="rect18"
+       fill="#bf0a30"
+       height="50"
+       width="1235"
+       y="600"
+       style="fill:#bb133e;fill-opacity:1" />
+  </g>
+  <rect
+     width="410"
+     height="350"
+     fill="#002868"
+     id="rect20"
+     style="fill:#002664;fill-opacity:1" />
+  <g
+     id="star"
+     transform="translate(205,45)"
+     fill="#fff">
+    <g
+       id="c">
+      <path
+         id="t"
+         d="M 0,-26 V 0 H 15"
+         transform="rotate(18 0,-26)" />
+      <use
+         xlink:href="#t"
+         transform="scale(-1,1)"
+         id="use25" />
+    </g>
+    <use
+       xlink:href="#c"
+       transform="rotate(72)"
+       id="use27" />
+    <use
+       xlink:href="#c"
+       transform="rotate(144)"
+       id="use29" />
+    <use
+       xlink:href="#c"
+       transform="rotate(216)"
+       id="use31" />
+    <use
+       xlink:href="#c"
+       transform="rotate(288)"
+       id="use33" />
+  </g>
+  <use
+     xlink:href="#star"
+     transform="rotate(30 205,175)"
+     id="use35" />
+  <use
+     xlink:href="#star"
+     transform="rotate(60 205,175)"
+     id="use37" />
+  <use
+     xlink:href="#star"
+     transform="rotate(90 205,175)"
+     id="use39" />
+  <use
+     xlink:href="#star"
+     transform="rotate(120 205,175)"
+     id="use41" />
+  <use
+     xlink:href="#star"
+     transform="rotate(150 205,175)"
+     id="use43" />
+  <use
+     xlink:href="#star"
+     transform="rotate(180 205,175)"
+     id="use45" />
+  <use
+     xlink:href="#star"
+     transform="rotate(210 205,175)"
+     id="use47" />
+  <use
+     xlink:href="#star"
+     transform="rotate(240 205,175)"
+     id="use49" />
+  <use
+     xlink:href="#star"
+     transform="rotate(270 205,175)"
+     id="use51" />
+  <use
+     xlink:href="#star"
+     transform="rotate(300 205,175)"
+     id="use53" />
+  <use
+     xlink:href="#star"
+     transform="rotate(330 205,175)"
+     id="use55" />
+  <use
+     xlink:href="#star"
+     y="130"
+     id="use57"
+     transform="matrix(2.2444674,0,0,2.3599727,-255.11582,-232.13593)"
+     x="0"
+     width="1235"
+     height="650" />
+</svg>

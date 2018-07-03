@@ -1,15 +1,29 @@
-.nav-main
-  position: fixed
+.nav
+  position: sticky
   top: 0
   display: flex
   align-items: center
-  justify-content: space-around
+  justify-content: space-between
   background-color: $color-blue
-  border-top: 4px solid $color-yellow
-  border-bottom: 4px solid $color-yellow
+  border-top: 8px solid $color-yellow
+  border-bottom: 8px solid $color-yellow
   width: 100%
   padding: 1.2em
   color: $color-bg
+  font-family: $font-default
   font-size: 1em
   font-weight: 700
   text-transform: uppercase
+  img
+    max-height: 50px
+.nav-link
+  color: $color-bg
+  text-decoration: none
+  padding: 0.3em
+  transition: 0.4s
+  margin-right: 0.2em
+  &:hover
+    color: darken($color-yellow,20%)
+    border-bottom: 3px solid $color-yellow
+
+

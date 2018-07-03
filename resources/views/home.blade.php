@@ -7,17 +7,19 @@
 @section('content')
 
 <section class="hero">
-  <h1 class="hero-title ">Fallout Arg</h1>
-  <h4 class="hero-text ">
-    A Fallout setting in the metropolitan city of Buenos Aires for rolplaying.
-    My idea is to make cards for almost every component of the game and use this page as rulebook.
-  </h4>
-  @CTA(['class' => 'main'])
+  <article>
+    <img class="hero-img" src="{{ asset('logo-01.svg') }}" alt="Fallout Argentina">
+    <h4 class="hero-text ">
+      A Fallout setting in the metropolitan city of Buenos Aires for rolplaying.<br>
+      My idea is to make cards for almost every component of the game and use this page as rulebook.
+    </h4>
+    @CTA(['class' => 'btn btn-main'])
     @slot('url')
-      {{ route('home') }}
+    {{ route('home') }}
     @endslot
     Suscribe!
-  @endCTA
+    @endCTA
+  </article>
 </section>
 
 @endsection
