@@ -21,6 +21,9 @@
     @endCTA
   </article>
 </section>
+<section>
+  @include('ammo.nav')
+</section>
 
 @endsection
 

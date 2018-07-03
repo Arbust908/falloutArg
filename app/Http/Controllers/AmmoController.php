@@ -91,8 +91,8 @@ class AmmoController extends Controller
   */
   public function edit(string $slug){
     $ammo = Ammo::where('slug', $slug)->first();
-    
-    return view('ammo.edit', compact('ammo'));
+    $VAC = compact('ammo');
+    return view('ammo.edit', $VAC);
   }
   
   /**

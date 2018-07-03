@@ -7,17 +7,7 @@
   
   <!-- CSRF Token -->
   <meta name="csrf-token" content="{{ csrf_token() }}">
-  
   <title>{{ config('app.name') }} @yield('title')</title>
-  @php
-  $num = rand(0,5);
-  $favi = "favicon";
-  if($num !== 0){
-    $favi .= strval($num);
-  }
-  $favi .= ".ico";
-  @endphp
-  {{--  <link rel="shortcut icon" href="favicon2.ico" type="image/x-icon">  --}}
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <!-- Scripts -->
   <script src="{{ asset('js/app.js') }}" defer></script>

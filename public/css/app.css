@@ -149,11 +149,11 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background-color: #4D7C9A;
+  background: repeating-linear-gradient(45deg, #606dbc, #606dbc 10px, #465298 10px, #465298 20px);
   border-top: 8px solid #F7E066;
   border-bottom: 8px solid #F7E066;
   width: 100%;
-  padding: 1.2em;
+  padding: 0.5em;
   color: #f5f8fa;
   font-family: "Source Sans Pro", sans-serif;
   font-size: 1em;
@@ -179,6 +179,29 @@ body {
   border-bottom: 3px solid #F7E066;
 }
 
+.ammo-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  background: repeating-linear-gradient(45deg, #606dbc, #606dbc 10px, #465298 10px, #465298 20px);
+  border-top: 4px solid #F7E066;
+  border-bottom: 4px solid #F7E066;
+  width: 100%;
+  padding: 0.3em;
+  color: #faea96;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1em;
+  font-weight: 700;
+  text-transform: uppercase;
+  height: 2.5em;
+}
+
 .cta {
   width: 90%;
   font-size: 1.2em;
@@ -186,6 +209,7 @@ body {
   padding: 0.7em;
   border-radius: 6px;
   max-width: 300px;
+  font-weight: 700;
 }
 
 .btn {
