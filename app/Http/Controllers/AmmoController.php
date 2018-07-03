@@ -140,39 +140,6 @@ class AmmoController extends Controller
     } elseif ($ammo->status === 0) {
       return view('ammo.show', $VAC);
     }
-
-    //     $reglas = [
-    //     "descripcion" => "required|string",
-    //     "icono" => "image",
-    //     "foto" => "image",
-    // ];
-
-    // $mensajes = [
-    //     "required" => "El campo :attribute es requerido",
-    //     "unique" => "El :attribute ya existe en nuestra Base de Datos",
-    //     "image" => ":attribute tiene que ser una imagen",
-    // ];
-
-    // $this->validate($request, $reglas, $mensajes);
-
-    // if ($request['icono'] !== null) {
-    //     $icon = $request->file("icono");
-    //     $iconPath = $poster->storePublicly("public/categories/icon");
-    //     $category->icon = $iconPath;
-    // }
-
-    // if ($request['foto'] !== null) {
-    //     $photo = $request->file("foto");
-    //     $photoPath = $poster->storePublicly("public/categories/photo");
-    //     $category->photo = $photoPath;
-    // }
-
-    // $category->description = $request["descripcion"];
-    // $category->status = 1;
-
-    // $category->save();
-
-    // return redirect("/categories/$category->id");
   }
   
   /**

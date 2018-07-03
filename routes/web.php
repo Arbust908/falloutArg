@@ -22,33 +22,33 @@ Route::get('/faq','HomeController@faq')->name('faq');
 
 /// Ammo routes ///
 // ** Route::resource('ammo', 'AmmoController');
-// Ammo *** Non-AuthRoute
-Route::prefix('ammo')->group(function () {
-    Route::get('/', 'AmmoController@index');
-    Route::get('/{slug}', 'AmmoController@show');
+/* ||Ammo *** Non-AuthRoute|| */
+Route::prefix('ammo')->name('ammo.')->group(function () {
+    Route::get('/', 'AmmoController@index')->name('index');
+    Route::get('/{slug}', 'AmmoController@show')->name('show');
     //Verb      - URI                - Action  - Route Name
     //GET       - /ammos             - index   - route('ammos.index')
     //GET       - /ammos/{ammo}      - show    - route('ammos.show')
+    /** ||Ammo *** AuthRoute|| **/
+    Route::middleware('auth')->group(function () {
+        //Verb      - URI                - Action  - Route Name
+        //GET       - /ammos/create      - create  - route('ammos.create')
+        //POST      - /ammos             - store   - route('ammos.store')
+        //GET       - /ammos/{ammo}/edit - edit    - route('ammos.edit')
+        //PUT/PATCH - /ammos/{ammo}      - update  - route('ammos.update')
+        //DELETE    - /ammos/{ammo}      - destroy - route('ammos.destroy')
+        Route::get('/create', 'AmmoController@create')->name('create');
+        Route::post('/', 'AmmoController@store')->name('store');
+        Route::get('{slug}/edit', 'AmmoController@edit')->name('edit');
+        Route::put('/{slug}', 'AmmoController@update')->name('update');
+        Route::delete('/{slug}', 'AmmoController@destroy')->name('destroy');
+        //My Routes
+        Route::get('/historial', 'AmmoController@historial')->name('history');
+        Route::patch('/{slug}/activate', 'AmmoController@activate')->name('activate');
+        Route::patch('/{slug}/deactivate', 'AmmoController@deactivate')->name('deactivate');
+        Route::get('/{slug}/preview', 'AmmoController@preview')->name('preview');
+    });
 });
-// Ammo *** AuthRoute
-Route::prefix('ammo')->group(function () {
-    //Verb      - URI                - Action  - Route Name
-    //GET       - /ammos/create      - create  - route('ammos.create')
-    //POST      - /ammos             - store   - route('ammos.store')
-    //GET       - /ammos/{ammo}/edit - edit    - route('ammos.edit')
-    //PUT/PATCH - /ammos/{ammo}      - update  - route('ammos.update')
-    //DELETE    - /ammos/{ammo}      - destroy - route('ammos.destroy')
-    Route::get('/create', 'AmmoController@create');
-    Route::post('/', 'AmmoController@store');
-    Route::get('{slug}/edit', 'AmmoController@edit');
-    Route::put('/{slug}', 'AmmoController@update');
-    Route::delete('/{slug}', 'AmmoController@destroy');
-    //My Routes
-    Route::get('/historial', 'AmmoController@historial');
-    Route::patch('/{slug}/activate', 'AmmoController@activate');
-    Route::patch('/{slug}/deactivate', 'AmmoController@deactivate');
-    Route::get('/{slug}/preview', 'AmmoController@preview');
-})->middleware('auth');
 
 /// Armor routes ///
 Route::prefix('armor')->group(function () {
@@ -67,7 +67,7 @@ Route::prefix('armor')->group(function () {
     Route::patch('/{slug}/activate', 'ArmorController@activate');
     Route::patch('/{slug}/deactivate', 'ArmorController@deactivate');
     Route::get('/{slug}/preview', 'ArmorController@preview');
-})->middleware('auth');
+});
 
 /// Item routes ///
 Route::prefix('item')->group(function () {
@@ -86,7 +86,7 @@ Route::prefix('item')->group(function () {
     Route::patch('/{slug}/activate', 'ItemController@activate');
     Route::patch('/{slug}/deactivate', 'ItemController@deactivate');
     Route::get('/{slug}/preview', 'ItemController@preview');
-})->middleware('auth');
+});
 
 /// NPC routes ///
 Route::prefix('npc')->group(function () {
@@ -105,7 +105,7 @@ Route::prefix('npc')->group(function () {
     Route::patch('/{slug}/activate', 'NpcController@activate');
     Route::patch('/{slug}/deactivate', 'NpcController@deactivate');
     Route::get('/{slug}/preview', 'NpcController@preview');
-})->middleware('auth');
+});
 
 /// Rarity routes ///
 Route::prefix('rarity')->group(function () {
@@ -124,7 +124,7 @@ Route::prefix('rarity')->group(function () {
     Route::patch('/{slug}/activate', 'RarityController@activate');
     Route::patch('/{slug}/deactivate', 'RarityController@deactivate');
     Route::get('/{slug}/preview', 'RarityController@preview');
-})->middleware('auth');
+});
 
 /// Skill routes ///
 Route::prefix('skill')->group(function () {
@@ -143,7 +143,7 @@ Route::prefix('skill')->group(function () {
     Route::patch('/{slug}/activate', 'SkillController@activate');
     Route::patch('/{slug}/deactivate', 'SkillController@deactivate');
     Route::get('/{slug}/preview', 'SkillController@preview');
-})->middleware('auth');
+});
 
 /// Stat routes ///
 Route::prefix('stat')->group(function () {
@@ -162,7 +162,7 @@ Route::prefix('stat')->group(function () {
     Route::patch('/{slug}/activate', 'StatController@activate');
     Route::patch('/{slug}/deactivate', 'StatController@deactivate');
     Route::get('/{slug}/preview', 'StatController@preview');
-})->middleware('auth');
+});
 
 /// Weapon routes ///
 Route::prefix('weapon')->group(function () {
@@ -181,4 +181,4 @@ Route::prefix('weapon')->group(function () {
     Route::patch('/{slug}/activate', 'WeaponController@activate');
     Route::patch('/{slug}/deactivate', 'WeaponController@deactivate');
     Route::get('/{slug}/preview', 'WeaponController@preview');
-})->middleware('auth');
+});
