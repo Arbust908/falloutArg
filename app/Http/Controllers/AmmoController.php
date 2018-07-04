@@ -65,8 +65,8 @@ class AmmoController extends Controller
     
     $ammo = new Ammo();
     
-    $ammoImg = $request->file("photo");
-    $ammoImgPath = $ammoImg->storePublicly("public/ammo/photo");
+    $ammoImg = $request->file("img");
+    $ammoImgPath = $ammoImg->storePublicly("public/ammo/img");
     $ammoImgPath = str_replace("public", "storage", $ammoImgPath);
     
     $ammo->name = $request["name"];

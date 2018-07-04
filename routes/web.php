@@ -38,12 +38,12 @@ Route::prefix('ammo')->name('ammo.')->group(function () {
         //PUT/PATCH - /ammos/{ammo}      - update  - route('ammos.update')
         //DELETE    - /ammos/{ammo}      - destroy - route('ammos.destroy')
         Route::get('/create', 'AmmoController@create')->name('create');
+        Route::get('/historial', 'AmmoController@historial')->name('history');
         Route::post('/', 'AmmoController@store')->name('store');
         Route::get('{slug}/edit', 'AmmoController@edit')->name('edit');
         Route::put('/{slug}', 'AmmoController@update')->name('update');
         Route::delete('/{slug}', 'AmmoController@destroy')->name('destroy');
         //My Routes
-        Route::get('/historial', 'AmmoController@historial')->name('history');
         Route::patch('/{slug}/activate', 'AmmoController@activate')->name('activate');
         Route::patch('/{slug}/deactivate', 'AmmoController@deactivate')->name('deactivate');
         Route::get('/{slug}/preview', 'AmmoController@preview')->name('preview');
