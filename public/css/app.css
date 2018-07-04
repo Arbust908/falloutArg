@@ -136,6 +136,11 @@ body {
   font-family: "Source Sans Pro", sans-serif;
 }
 
+main {
+  background-color: #cddce6;
+  min-height: 100vh;
+}
+
 .nav {
   position: -webkit-sticky;
   position: sticky;
@@ -149,7 +154,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background: repeating-linear-gradient(45deg, #606dbc, #606dbc 10px, #465298 10px, #465298 20px);
+  background: repeating-linear-gradient(45deg, #4D7C9A, #4D7C9A 10px, #6795b3 10px, #6795b3 20px);
   border-top: 8px solid #F7E066;
   border-bottom: 8px solid #F7E066;
   width: 100%;
@@ -159,6 +164,7 @@ body {
   font-size: 1em;
   font-weight: 700;
   text-transform: uppercase;
+  z-index: 900;
 }
 
 .nav img {
@@ -179,27 +185,45 @@ body {
   border-bottom: 3px solid #F7E066;
 }
 
-.ammo-nav {
+.cards-holder {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  background: repeating-linear-gradient(45deg, #606dbc, #606dbc 10px, #465298 10px, #465298 20px);
-  border-top: 4px solid #F7E066;
-  border-bottom: 4px solid #F7E066;
-  width: 100%;
-  padding: 0.3em;
-  color: #faea96;
-  font-family: "Source Sans Pro", sans-serif;
-  font-size: 1em;
-  font-weight: 700;
-  text-transform: uppercase;
-  height: 2.5em;
+  max-width: 1140px;
+  margin: 0 auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.cards-holder .card {
+  color: white;
+  text-decoration: none;
+  padding: 1em;
+  background-color: #89adc4;
+  border-radius: 6px;
+  border: 2px solid #F7E066;
+  width: 300px;
+  height: 380px;
+  margin: 20px;
+  -webkit-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12);
+          box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12);
+}
+
+.cards-holder .card:hover {
+  -webkit-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.4), 0 2px 2px 0 rgba(0, 0, 0, 0.34), 0 3px 1px -2px rgba(0, 0, 0, 0.32);
+          box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.4), 0 2px 2px 0 rgba(0, 0, 0, 0.34), 0 3px 1px -2px rgba(0, 0, 0, 0.32);
+  background-color: #abc5d5;
+}
+
+.inactive {
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
 }
 
 .cta {
@@ -282,5 +306,75 @@ body {
   font-weight: 700;
   margin-bottom: 2em;
   max-width: 50%;
+}
+
+.ammo-nav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  background: repeating-linear-gradient(45deg, #4D7C9A, #4D7C9A 10px, #6795b3 10px, #6795b3 20px);
+  border-top: 4px solid #F7E066;
+  border-bottom: 4px solid #F7E066;
+  width: 100%;
+  padding: 0.3em;
+  color: #faea96;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1em;
+  font-weight: 700;
+  text-transform: uppercase;
+  height: 2.5em;
+  z-index: 899;
+}
+
+.card-ammo {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.card-ammo h3 {
+  font-size: 2em;
+  text-transform: uppercase;
+  font-weight: 300;
+  margin-bottom: 1em;
+}
+
+.card-ammo h6 {
+  font-size: 1.3em;
+  margin-bottom: 1em;
+}
+
+.card-ammo p {
+  font-size: 0.9em;
+  line-height: 1.2em;
+  margin-bottom: 1em;
+}
+
+.card-ammo img {
+  width: 100px;
+  height: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background: repeating-linear-gradient(-25deg, #f4d636, #f4d636 10px, #faea96 10px, #faea96 20px);
+  border-radius: 6px;
 }
 

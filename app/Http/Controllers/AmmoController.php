@@ -53,15 +53,15 @@ class AmmoController extends Controller
       "description" => "required|string",
       "img" => "required|image",
     ];
-    
-    $mesage = [
+
+    $message = [
       "required" => "El campo :attribute es requerido",
       "unique" => "El :attribute ya existe en nuestra Base de Datos",
       "image" => ":attribute tiene que ser una imagen",
       "numeric" => ":attribute deberia ser un numero",
     ];
     
-    $this->validate($request, $reglas, $mensajes);
+    $this->validate($request, $rules, $message);
     
     $ammo = new Ammo();
     
@@ -73,7 +73,7 @@ class AmmoController extends Controller
     $ammo->slug = str_slug($request["name"]);
     $ammo->weight = $request["weight"];
     $ammo->description = $request["description"];
-    $ammo->img = $prodImgPath;
+    $ammo->img = $ammoImgPath;
     $ammo->status = 0;
     //$ammo->owner_id = Auth::user()->id;
     

@@ -10,14 +10,16 @@
 
 <section class="cards-holder">
   @foreach($ammos as $ammo)
-  <article class="card card-ammo">
-    <a href="{{ url('ammo/'.$ammo->slug) }}">
-      <h3>{{ $ammo->name }}</h3>
-      <h6>{{ $ammo->weight }}</h6>
-      <p>{{ $ammo->description }}</p>
-      <img src="{{ $ammo->img }}" alt="{{ $ammo->name }} image">
-    </a>
-  </article>
+  <a href="{{ url('ammo/'.$ammo->slug) }}" class="card card-ammo 
+  @if($ammo->status === 0)
+  inactive
+  @endif
+  ">
+    <h3>{{ $ammo->name }}</h3>
+    <h6>Weight: {{ $ammo->weight }} wp</h6>
+    <p>{{ $ammo->description }}</p>
+    <img src="{{ asset($ammo->img) }}" alt="Image of {{ $ammo->name }}">
+  </a>
   @endforeach
 </section>
 

@@ -21,8 +21,22 @@
     @endCTA
   </article>
 </section>
-<section>
-  @include('ammo.nav')
+
+@include('ammo.nav')
+
+<section class="hero">
+  <article>
+    <img class="hero-img" src="{{ asset('logo-01.svg') }}" alt="Fallout Argentina">
+    <h4 class="hero-text ">
+      Esto es contenido de prueba Esto es contenido de prueba Esto es contenido de prueba Esto es contenido de prueba Esto es contenido de prueba Esto es contenido de prueba 
+    </h4>
+    @CTA(['class' => 'btn btn-main'])
+    @slot('url')
+    {{ route('home') }}
+    @endslot
+    Esto es contenido de prueba
+    @endCTA
+  </article>
 </section>
 
 @endsection

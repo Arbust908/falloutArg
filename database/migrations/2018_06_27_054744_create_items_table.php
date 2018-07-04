@@ -21,7 +21,7 @@ class CreateItemsTable extends Migration
             $table->integer('weight');
             
             $table->integer('rarity_id');
-            $table->string('description');
+            $table->text('description');
             $table->string('effect');
             $table->string('img');
             

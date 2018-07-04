@@ -18,20 +18,20 @@
 </section>
 
 {!! Form::open(array('route' => 'ammo.store', 'data-parsley-validate' => '', 'files' => true)) !!}
-{{ Form::label('name', 'Name:') }}
-{{ Form::text('name', null, array('class' => 'form-control', 'required' => '', 'maxlength' => '255')) }}
+  {{ Form::label('name', 'Name:') }}
+  {{ Form::text('name', null, array('class' => 'form-control', 'required' => '', 'maxlength' => '255')) }}
 
-{{ Form::label('weight', 'Weight:') }}
-{{ Form::numeric('weight', null, array('class' => 'form-control', 'required' => '') ) }}
+  {{ Form::label('weight', 'Weight:') }}
+  {{ Form::number('weight', null, array('class' => 'form-control', 'required' => '') ) }}
 
-{{ Form::label('description', "Description:") }}
-{{ Form::textarea('description', null, array('class' => 'form-control','required' => '')) }}
+  {{ Form::label('description', "Description:") }}
+  {{ Form::textarea('description', null, array('class' => 'form-control','required' => '')) }}
 
-{{ Form::label('img', 'Upload a Image') }}
-{{ Form::file('img','required' => '') }}
+  {{ Form::label('img', 'Upload a Image') }}
+  {{ Form::file('img',['required' => '']) }}
 
 
-{{ Form::submit('Create Ammo Card', array('class' => 'btn btn-success btn-lg btn-block', 'style' => 'margin-top: 20px;')) }}
+  {{ Form::submit('Create Ammo Card', array('class' => 'btn btn-success btn-lg btn-block', 'style' => 'margin-top: 20px;')) }}
 {!! Form::close() !!}
 
 @endsection

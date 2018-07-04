@@ -20,7 +20,7 @@ class CreateAmmosTable extends Migration
       
       $table->string('name');
       $table->integer('weight');
-      $table->string('description');
+      $table->text('description');
       $table->string('img');
       
       $table->integer('status');

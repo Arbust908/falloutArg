@@ -19,7 +19,7 @@ class CreateRaritiesTable extends Migration
 
       
       $table->string('name');
-      $table->string('description');
+      $table->text('description');
       $table->string('img');
       
       $table->integer('status');
