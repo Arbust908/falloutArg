@@ -20,7 +20,9 @@
 </head>
 <body>
   <header class="nav">
-    <img src="{{ asset('logo-01.svg') }}" alt="Logo">
+    <a href="{{ route('home') }}">
+      <img src="{{ asset('logo-01.svg') }}" alt="Logo">
+    </a>
     <nav class="nav-main">
       @guest
       <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-| All Ammo Cards
+| All Ammo Cards Inactive
 @endsection
 
 @section('content')
