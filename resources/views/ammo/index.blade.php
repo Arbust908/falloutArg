@@ -15,10 +15,12 @@
   inactive
   @endif
   ">
+    <picture>
+      <img src="{{ asset($ammo->img) }}" alt="Image of {{ $ammo->name }}">
+    </picture>
     <h3>{{ $ammo->name }}</h3>
     <h6>Weight: {{ $ammo->weight }} wp</h6>
     <p>{{ $ammo->description }}</p>
-    <img src="{{ asset($ammo->img) }}" alt="Image of {{ $ammo->name }}">
   </a>
   @endforeach
 </section>
