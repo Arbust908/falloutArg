@@ -15,16 +15,15 @@ class CreateArmorsTable extends Migration
   {
     Schema::create('armors', function (Blueprint $table) {
       $table->increments('id');
-      $table->string('slug');
       
-      $table->integer('item_id');
       $table->integer('skill_id');
       $table->string('requirement');
       $table->string('100%');
       $table->string('75%');
       $table->string('50%');
       $table->string('25%');
-      $table->string('trait');
+      //Esto es el 'effect' del item
+      //$table->string('trait');
       
       $table->timestamps();
     });
