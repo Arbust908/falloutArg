@@ -1,8 +1,16 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\User;
 use App\Ammo;
+use App\Armor;
+use App\Item;
+use App\Npc;
+use App\Player;
+use App\Rarity;
+use App\Skill;
+use App\Stat;
+use App\User;
+use App\Weapon;
 
 class DatabaseSeeder extends Seeder{
   /**
@@ -11,9 +19,16 @@ class DatabaseSeeder extends Seeder{
   * @return void
   */
   public function run(){
-    $this->call(AmmoSeeder::class);
     $this->call(UserSeeder::class);
-    factory('App\Ammo',10)->create();
+    $this->call(RaritySeeder::class);
+    $this->call(ItemSeeder::class);
+    $this->call(AmmoSeeder::class);
+    $this->call(StatSeeder::class);
+    $this->call(SkillSeeder::class);
+    $this->call(WeaponSeeder::class);
+    $this->call(ArmorSeeder::class);
+
+    //factory('App\Rarity',100)->create();
     // $this->call(UsersTableSeeder::class);
   }
 }

@@ -3,19 +3,17 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Skill;
+use App\Item;
 
-class Armor extends Model
-{
-    public function item()
-    {
-        return $this->belongsTo('App\Item');
-    }
-    public function skill()
-    {
-        return $this->hasOne('App\Skill');
-    }
-    public function ammo()
-    {
-        return $this->hasOne('App\Ammo');
-    }
+class Armor extends Model{
+  
+  public function item(){
+    return $this->morphToMany('App\Item', 'itemable');
+  }
+  
+  public function requiement(){
+    return $this->hasOne('App\Skill');
+  }
+
 }
