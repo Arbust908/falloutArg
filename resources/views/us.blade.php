@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-| Home
+About Us |
 @endsection
 
 @section('content')
@@ -28,4 +28,3 @@
 @section('scripts')
 
 @endsection
-

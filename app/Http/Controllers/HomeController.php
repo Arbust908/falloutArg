@@ -36,9 +36,9 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function about()
+    public function us()
     {
-        return view('about');
+        return view('us');
     }
 
     /**

@@ -17,7 +17,7 @@ use App\Http\Controllers\HomeController;
 Auth::routes();
 /// Base routes ///
 Route::get('/', 'HomeController@index')->name('home');
-Route::get('/about', 'HomeController@about')->name('about');
+Route::get('/us', 'HomeController@us')->name('us');
 Route::get('/faq','HomeController@faq')->name('faq');
 
 /// Ammo routes ///
